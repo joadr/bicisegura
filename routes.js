@@ -5,7 +5,7 @@ Router.map(function(){
     });
 
     this.route('/search/:q', {
-        name: 'home',
+        name: 'search',
         layoutTemplate: 'base',
         waiton: function(){
             return []
