@@ -1,12 +1,15 @@
 Template.search.onRendered(function() {
-    this.subscribe('itemsSerial', Router.current().params.query);
+    this.subscribe('itemsSerial', Router.current().params.q);
 });
 
 Template.search.helpers({
     frames: function(){
-        return Items.find({serialNumber: Router.current().params.query, type: 'frame'}).fetch();
+        return Items.find({ serialNumber: Router.current().params.q, type: 'frame', stolen: true }).fetch();
     },
     forks: function(){
-        return Items.find({serialNumber: Router.current().params.query, type: 'fork'}).fetch();
+        return Items.find({ serialNumber: Router.current().params.q, type: 'fork', stolen: true }).fetch();
+    },
+    picture: function(){
+        return this.images[0].url;
     }
 });

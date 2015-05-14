@@ -31,7 +31,7 @@ Items.attachSchema(new SimpleSchema({
     serialNumber: {
         type: String,
         label: "Número de serie",
-        optional: true
+        unique: true
     },
     type: {
         type: String,
@@ -64,6 +64,14 @@ Items.attachSchema(new SimpleSchema({
         label: 'Imagen',
         optional: true
     }),
+    ticket: orion.attribute('file', {
+        label: 'Boleta (opcional)',
+        optional: true
+    }),
+    stolen: {
+        type: Boolean,
+        label: 'Robada'
+    },
 
     createdBy: orion.attribute('createdBy')
 }));

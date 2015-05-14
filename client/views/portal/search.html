@@ -1,15 +1,46 @@
 <template name="search">
-    {{#each frames }}
-        {{> item }}
-        {{ else }}
-        <p>No hay marcos con ese número de serie.</p>
-    {{/each}}
-    <hr>
-    {{#each forks }}
-        {{> item }}
-        {{ else }}
-        <p>No hay horquillas con ese número de serie.</p>
-    {{/each}}
+    <div class="container">
+        <h3>Marcos</h3>
+        <ul class="collection">
+            {{#each frames }}
+            <li class="collection-item avatar">
+                <img src="{{ picture }}" alt="" class="circle">
+                <span class="title">{{ brand }} {{ color}} {{ year }} ({{ serialNumber }}) </span>
+                <p><strong class="red-text">ROBADA</strong><br>
+                    Dueño: {{ owner }}
+                </p>
+                <br>
+            </li>
+            {{ else }}
+            <li class="collection-item avatar">
+                <i class="mdi-content-clear circle"></i>
+                <span class="title">No encontrado</span>
+                <p>No hay marcos con ese número de serie</p>
+                <br>
+            </li>
+            {{/each}}
+        </ul>
+        <hr>
+        <ul class="collection">
+            {{#each forks }}
+                <li class="collection-item avatar">
+                    <img src="{{ picture }}" alt="" class="circle">
+                    <span class="title">{{ brand }} {{ color}} {{ year }} ({{ serialNumber }}) </span>
+                    <p><strong class="red-text">ROBADA</strong><br>
+                        Dueño: {{ owner }}
+                    </p>
+                    <br>
+                </li>
+            {{ else }}
+                <li class="collection-item avatar">
+                    <i class="mdi-content-clear circle"></i>
+                    <span class="title">No encontrado</span>
+                    <p>No hay horquillas con ese número de serie</p>
+                    <br>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 </template>
 
 <template name="item">

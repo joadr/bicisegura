@@ -4,8 +4,8 @@ Router.map(function(){
        layoutTemplate: 'base'
     });
 
-    this.route('/search/:query', {
-        name: 'search',
-        layoutTemplate: 'base'
+    this.route('search', {
+        path: '/search/:q',
+        layoutTemplate: 'base',
     });
 });
