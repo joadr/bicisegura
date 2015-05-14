@@ -1,0 +1,18 @@
+<template name="search">
+    {{#each frames }}
+        {{> item }}
+        {{ else }}
+        <p>No hay marcos con ese número de serie.</p>
+    {{/each}}
+    <hr>
+    {{#each forks }}
+        {{> item }}
+        {{ else }}
+        <p>No hay horquillas con ese número de serie.</p>
+    {{/each}}
+</template>
+
+<template name="item">
+    {{serialNumber}}
+    {{brand}}
+</template>

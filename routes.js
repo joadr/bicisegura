@@ -4,11 +4,8 @@ Router.map(function(){
        layoutTemplate: 'base'
     });
 
-    this.route('/search/:q', {
+    this.route('/search/:query', {
         name: 'search',
-        layoutTemplate: 'base',
-        waiton: function(){
-            return []
-        }
+        layoutTemplate: 'base'
     });
 });

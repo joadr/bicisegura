@@ -17,7 +17,8 @@ Items = new orion.collection('items', {
             { data: "type", title: "Tipo" },
             { data: "brand", title: "Marca" },
             { data: "year", title: "Año" },
-            { data: "color", title: "Color" }
+            { data: "color", title: "Color" },
+            orion.attributeColumn('createdBy', 'createdBy', 'Dueño')
         ]
     }
 });

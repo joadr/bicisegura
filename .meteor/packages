@@ -5,12 +5,11 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 iron:router
 orionjs:core
 materialize:materialize
 orionjs:materialize
+nicolaslopezj:orion-sites-files
 orionjs:filesystem
 orionjs:file-attribute
 jquery
