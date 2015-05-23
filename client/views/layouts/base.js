@@ -2,7 +2,8 @@ Template.base.events({
     'click .toggle-search-box' : function(event){
        event.preventDefault();
         $('.rest').hide();
-       $('.search-box').show();
+        $('.search-box').show();
+        $("#searchSerialNumber").focus();
     },
     'focusout .search-box' : function(){
         $('.search-box').hide();
@@ -11,6 +12,10 @@ Template.base.events({
     'submit .search-box': function(event){
         event.preventDefault();
         Router.go('search', {q: $("#searchSerialNumber").val()});
+    },
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout();
     }
 });
 

@@ -6,6 +6,10 @@ Router.map(function(){
 
     this.route('search', {
         path: '/search/:q',
-        layoutTemplate: 'base',
+        layoutTemplate: 'base'
+    });
+
+    this.route('register', {
+        path: '/register'
     });
 });

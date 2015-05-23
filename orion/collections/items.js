@@ -50,6 +50,11 @@ Items.attachSchema(new SimpleSchema({
         label: "Marca",
         optional: true
     },
+    model: {
+        type: String,
+        label: "Modelo",
+        optional: true
+    },
     year: {
         type: Number,
         label: "Año",
@@ -71,6 +76,26 @@ Items.attachSchema(new SimpleSchema({
     stolen: {
         type: Boolean,
         label: 'Robada'
+    },
+    stolenDate: {
+        type: Date,
+        label: "Fecha del robo",
+        optional: true
+    },
+    stolenCity: {
+        type: String,
+        label: "Ciudad del robo",
+        optional: true
+    },
+    stolenComuna: {
+        type: String,
+        label: "Comunda del robo",
+        optional: true
+    },
+    stolenCoords: {
+        type: String,
+        label: "Lugar de robo",
+        optional: true
     },
 
     createdBy: orion.attribute('createdBy')

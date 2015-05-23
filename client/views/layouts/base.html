@@ -1,5 +1,5 @@
 <template name="base">
-    <div class="bicisegura">
+    <div class="bicisegura register">
         {{> header }}
 
         {{> yield }}
@@ -13,9 +13,16 @@
         <div class="nav-wrapper container">
             <div class="rest">
                 <a id="logo-container" href="/" class="brand-logo grey-text text-darken-2">BiciSegura</a>
+                <div class="right">
+                    <a href="#"><i class="mdi-action-search grey-text text-darken-2 toggle-search-box"></i></a>
+                </div>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#"><i class="mdi-action-search grey-text text-darken-2 toggle-search-box"></i></a></li>
+                    {{#if currentUser}}
+                    <li><a href="logout" class="grey-text text-darken-2 logout">Cerrar sesión</a></li>
+                    {{else}}
                     <li><a href="/admin" class="grey-text text-darken-2">Iniciar sesión</a></li>
+                    <li><a href="/register" class="grey-text text-darken-2">Registrarme</a></li>
+                    {{/if}}
                 </ul>
             </div>
 
@@ -29,9 +36,14 @@
             </form>
 
             <ul id="nav-mobile" class="side-nav">
+                {{#if currentUser}}
+                    <li><a href="/logout">Cerrar sesión</a></li>
+                {{ else }}
                 <li><a href="/admin">Iniciar sesión</a></li>
+                <li><a href="/register">Registrarme</a></li>
+                {{/if}}
             </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
         </div>
     </nav>
 </template>

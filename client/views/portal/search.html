@@ -1,49 +1,49 @@
 <template name="search">
-    <div class="container">
-        <h3>Marcos</h3>
-        <ul class="collection">
-            {{#each frames }}
-            <li class="collection-item avatar">
-                <img src="{{ picture }}" alt="" class="circle">
-                <span class="title">{{ brand }} {{ color}} {{ year }} ({{ serialNumber }}) </span>
-                <p><strong class="red-text">ROBADA</strong><br>
-                    Dueño: {{ owner }}
-                </p>
-                <br>
-            </li>
+    <div class="container searchPage">
+        {{#if item}}
+        {{#with item}}
+        <div class="section">
+            <div class="row">
+                <div class="col l12">
+                    <article class="">
+                        <div class="col l8 s12">
+                            <h2>{{ tipo }} {{ marca }} ({{ serialNumber }})</h2>
+                            <img width="945" height="709" src="{{image}}" class="responsive-img z-depth-3 wp-post-image">
+                            <!--<div class="section">
+                                &lt;!&ndash; AREA &ndash;&gt;
+                                <a alt="City" title="City" class="btn white-text" href="http://adbeus.com/coffee/montreal/plateau/">The Plateau</a>
+                                &lt;!&ndash; ROASTERS &ndash;&gt;
+                                <a alt="Roaster" title="Roaster" class="btn white-text" href="http://adbeus.com/roaster/barista/">Barista</a>
+                                <a alt="Roaster" title="Roaster" class="btn white-text" href="http://adbeus.com/roaster/verve/">Verve</a>
+                            </div>-->
+                        </div>
+                        <div class="col l4 s12">
+                            <div class="card-panel teal lighten-1">
+                                <h5>Detalles</h5>
+                                <hr>
+                                <span class="detail-title">Marca</span>
+                                <span class="">{{brand}}</span>
+                                <hr>
+                                <span class="detail-title">Modelo</span>
+                                <span class="">{{model}}</span>
+                                <hr>
+                                <span class="detail-title">Año</span>
+                                <span class="">{{year}}</span>
+                                <hr>
+                                <span class="detail-title">Color</span>
+                                <span class="">{{color}}</span>
+                                <hr>
+                                <span class="detail-title">Robada</span>
+                                <span class="">SI</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        {{/with}}
             {{ else }}
-            <li class="collection-item avatar">
-                <i class="mdi-content-clear circle"></i>
-                <span class="title">No encontrado</span>
-                <p>No hay marcos con ese número de serie</p>
-                <br>
-            </li>
-            {{/each}}
-        </ul>
-        <hr>
-        <ul class="collection">
-            {{#each forks }}
-                <li class="collection-item avatar">
-                    <img src="{{ picture }}" alt="" class="circle">
-                    <span class="title">{{ brand }} {{ color}} {{ year }} ({{ serialNumber }}) </span>
-                    <p><strong class="red-text">ROBADA</strong><br>
-                        Dueño: {{ owner }}
-                    </p>
-                    <br>
-                </li>
-            {{ else }}
-                <li class="collection-item avatar">
-                    <i class="mdi-content-clear circle"></i>
-                    <span class="title">No encontrado</span>
-                    <p>No hay horquillas con ese número de serie</p>
-                    <br>
-                </li>
-            {{/each}}
-        </ul>
+            No hay marco o bicicleta robada con este número de serie
+        {{/if}}
     </div>
-</template>
-
-<template name="item">
-    {{serialNumber}}
-    {{brand}}
 </template>
