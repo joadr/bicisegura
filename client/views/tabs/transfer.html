@@ -1,0 +1,69 @@
+<template name="transfer">
+    <div class="blue header-container">
+        <nav class="blue">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li>
+                        <a href="#" data-activates="nav-mobile" class="button-collapse">
+                            <i class="mdi-navigation-menu"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>
+                        <a class="dropdown-button user-links-activator" href="#" data-activates="navbar-user-dropdown">
+                            <i class="mdi-social-person"></i>
+                        </a><ul id="navbar-user-dropdown" class="dropdown-content">
+                        <li>
+        <span class="grey-text text-darken-1">
+          Joaquín
+        </span>
+                        </li>
+
+                        <li>
+                            <a href="/admin/my-account" class="grey-text text-darken-4">Mi Cuenta</a>
+                        </li>
+
+                        <li>
+                            <a href="/admin/my-account/profile" class="grey-text text-darken-4">Editar perfil</a>
+                        </li>
+
+                        <li>
+                            <a href="/admin/my-account/change-password" class="grey-text text-darken-4">Cambiar contraseña</a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li><a href="#" class="grey-text text-darken-4 logout">Salir</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h4>
+
+            Transferir Bicicleta
+
+        </h4>
+    </div>
+    <div class="materialize-content-container">
+        <form>
+            <div class="input-field">
+                <i class="mdi-action-perm-identity prefix"></i>
+                <label for="at-field-name" class="icon_prefix">
+                    Email al cual transferir
+                </label>
+                <input class="validate" required type="text" id="at-field-name" name="name" autocapitalize="none" autocorrect="off">
+            </div>
+
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+        </form>
+    </div>
+</template>

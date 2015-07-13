@@ -3,7 +3,7 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <br><br>
-                <h1 class="header center teal-text text-lighten-2 white-text">{{ dict 'home.siteName' 'Bici Segura' }}</h1>
+                <h1 class="header center teal-text text-lighten-2 white-text">{{ dict 'home.siteName' 'BiciSegura' }}</h1>
                 <div class="row center">
                     <h5 class="header col s12 light white-text" style="background: rgba(0,0,0,0.4); border-radius: 5px;">{{ dict 'home.slogan'}}</h5>
                 </div>
@@ -13,6 +13,9 @@
                     {{else}}
                         <a href="/register" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Registrarme y Registrar Bicicleta</a>
                     {{/if}}
+                </div>
+                <div class="row center">
+                    <a href="#" id="download-button" class="btn-large waves-effect waves-light  red lighten-1 toggle-search-box">Buscar por número de serie</a>
                 </div>
                 <br><br>
 
@@ -49,7 +52,7 @@
                         <h2 class="center brown-text"><i class="mdi-action-settings"></i></h2>
                         <h5 class="center">Fácil de usar</h5>
 
-                        <p class="light">Con BiciSegura, no es necesario moverte de la comodidad de tu hogar para registrar tu bicicleta, no debes venir a nuestras oficinas para notificar de robo.</p>
+                        <p class="light">Con {{ dict 'home.siteName' 'BiciSegura' }}, no es necesario moverte de la comodidad de tu hogar para registrar tu bicicleta, no debes venir a nuestras oficinas para notificar de robo.</p>
                     </div>
                 </div>
             </div>

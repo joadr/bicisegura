@@ -9,7 +9,20 @@ Router.map(function(){
         layoutTemplate: 'base'
     });
 
-    this.route('register', {
+    /*this.route('register', {
         path: '/register'
+    });*/
+
+    AccountsTemplates.configureRoute('signUp', {
+        name: 'register',
+        path: '/register',
+        layoutTemplate: 'orionMaterializeOutAdminLayout',
+        template: 'register',
+        redirect: '/'
     });
+
+    this.route('transfer', {
+        path: '/admin/transfer',
+        layoutTemplate: 'orionMaterializeLayout',
+    })
 });

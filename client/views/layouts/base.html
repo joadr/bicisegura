@@ -12,9 +12,9 @@
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <div class="rest">
-                <a id="logo-container" href="/" class="brand-logo grey-text text-darken-2">BiciSegura</a>
+                <a id="logo-container" href="/" class="brand-logo grey-text text-darken-2">{{ dict 'home.siteName' 'BiciSegura' }}</a>
                 <div class="right">
-                    <a href="#"><i class="mdi-action-search grey-text text-darken-2 toggle-search-box"></i></a>
+                    <a href="#" class="grey-text text-darken-2"><i class="mdi-action-search grey-text text-darken-2 toggle-search-box"></i></a>
                 </div>
                 <ul class="right hide-on-med-and-down">
                     {{#if currentUser}}
@@ -53,7 +53,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Bicisegura</h5>
+                    <h5 class="white-text">{{ dict 'home.siteName' 'BiciSegura' }}</h5>
                     <p class="grey-text text-lighten-4">Somos un grupo de estudiantes universitarios desarrollando una idea para hacer del mundo un mejor lugar.</p>
 
 
@@ -80,7 +80,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Creado por <a class="brown-text text-lighten-3" href="mailto:joaquin.diaz@ies.cl">Joaquín Díaz</a>
+                {{ dict 'home.siteName' 'BiciSegura' }}, Todos los derechos reservados
             </div>
         </div>
     </footer>

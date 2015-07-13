@@ -1,15 +1,45 @@
 <template name="register">
+    <!--<div class="bicisegura register teal darken-2 valign-wrapper">-->
+        {{> atForm state='signUp'}}
+    <!--</div>-->
+</template>
+
+<template name="registerasdasdasd">
     <div class="bicisegura register teal darken-2 valign-wrapper">
         <div class="valign register-box">
             <div class="card-panel white">
                 <h5>Registrarme</h5>
                 <form class="register-form">
                     <div class="input-field">
+                        <i class="mdi-action-perm-identity prefix"></i>
+                        <label for="at-field-name" class="icon_prefix">
+                            Nombre
+                        </label>
+                        <input class="validate" required type="text" id="at-field-name" name="name" autocapitalize="none" autocorrect="off">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="mdi-action-credit-card prefix"></i>
+                        <label for="at-field-rut" class="icon_prefix">
+                            RUT
+                        </label>
+                        <input class="validate" required type="text" id="at-field-rut" name="rut" autocapitalize="none" autocorrect="off">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="mdi-communication-phone prefix"></i>
+                        <label for="at-field-phone" class="icon_prefix">
+                            Teléfono
+                        </label>
+                        <input class="validate" required type="tel" id="at-field-phone" name="phone" autocapitalize="none" autocorrect="off">
+                    </div>
+
+                    <div class="input-field">
                         <i class="mdi-communication-email prefix"></i>
                         <label for="at-field-email" class="icon_prefix">
                             Email
                         </label>
-                        <input class="validate" type="email" id="at-field-email" name="at-field-email" autocapitalize="none" autocorrect="off">
+                        <input class="validate" required type="email" id="at-field-email" name="email" autocapitalize="none" autocorrect="off">
                     </div>
 
                     <div class="input-field">
@@ -17,8 +47,17 @@
                         <label for="at-field-password" class="icon_prefix">
                             Contraseña
                         </label>
-                        <input class="validate" type="password" id="at-field-password" name="at-field-password" autocapitalize="none" autocorrect="off">
+                        <input class="validate" required type="password" id="at-field-password" name="password" autocapitalize="none" autocorrect="off">
                     </div>
+
+                    <div class="input-field">
+                        <i class="mdi-communication-vpn-key prefix"></i>
+                        <label for="at-field-rePassword" class="icon_prefix">
+                            Repetir Contraseña
+                        </label>
+                        <input required type="password" id="at-field-rePassword" name="rePassword" autocapitalize="none" autocorrect="off">
+                    </div>
+
                     <br>
                     <button class="btn">
                         Registrarme
